@@ -22,7 +22,7 @@ This project is an end-to-end pipeline for building an **interactive video learn
 | 🧠 NLP | `Whisper`, `RAKE-NLTK`, `Gensim (LDA)` |
 | ☁️ Cloud | `AWS S3`, `AWS EC2 (Ubuntu)`, ``AWS SageMaker`` |
 | 🧪 Data Processing | `NLTK`, `Pydub`, `FFmpeg`, `ThreadPoolExecutor` |
-| 🖥️ Frontend | `Flask`, `Bootstrap`, `Jinja2`, `HTML5 video` |
+| 🖥️ Frontend | `Flask`, `Bootstrap`, `HTML5 video` |
 | 🎨 Extras | `Matplotlib` (Word Cloud), `base64` encoding |
 
 ---
