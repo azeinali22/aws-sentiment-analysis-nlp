@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Training Modules</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #12131a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .header {
+      background-color: #1f2c3d;
+      padding: 40px 20px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .search-bar {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .search-bar input {
+      border-radius: 50px 0 0 50px;
+      padding: 12px 20px;
+    }
+
+    .search-bar button {
+      border-radius: 0 50px 50px 0;
+      padding: 12px 25px;
+    }
+
+    .card-grid {
+      padding: 40px 20px;
+    }
+U nano 7.2                                                                              index.html
+    }
+
+    .video-card {
+      background-color: #1f2c3d;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .video-card:hover {
+      transform: scale(1.03);
+    }
+
+    .video-card img {
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .video-title {
+      background-color: #29394e;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 576px) {
+      .video-card img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Amirhossein Zeinali Dehaghani (1225496)</h1>
+    <form method="POST" action="/" class="search-bar d-flex">
+      <input type="text" class="form-control" placeholder="Search by phrases or topics..." name="search" value="{{ search_query }}">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="container card-grid">
+    {% if movie_urls %}
+      <div class="row g-4">
+        {% for movie_url in movie_urls %}
+          <div class="col-6 col-sm-4 col-md-3">
+            <a href="{{ url_for('watch', video_filename=movie_url.split('/')[-1]) }}">
+              <div class="card video-card">
+                <img src="https://nlpprojectamirhossein.s3.us-east-1.amazonaws.com/thumbnails/{{ movie_url.split('/')[-1].replace('.mp4', '.jpg') }}" alt="Thumbnail">
+                <div class="video-title">
+                  {{ movie_url.split('/')[-1] }}
+                  <span class="badge bg-success ms-2 d-none" id="badge_{{ movie_url.split('/')[-1] }}">Completed</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center mt-5">No videos found matching "{{ search_query }}"</p>
+    {% endif %}
+  </div>
+
+  <!-- JS for Completion Badge -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      {% for movie_url in movie_urls %}
+        const vid = "{{ movie_url.split('/')[-1] }}";
+        if (localStorage.getItem("completed_" + vid) === "true") {
+          const badge = document.getElementById("badge_" + vid);
+          if (badge) badge.classList.remove("d-none");
+  }
+      {% endfor %}
+    });
+  </script>
+</body>
+</html>
