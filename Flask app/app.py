@@ -8,61 +8,28 @@ import base64
 
 app = Flask(__name__)
 
-# S3 URLs
+# Public S3 paths
 BASE_URL = 'https://nlpprojectamirhossein.s3.us-east-1.amazonaws.com/datasource/'
 json_url = 'https://nlpprojectamirhossein.s3.us-east-1.amazonaws.com/json/extracted_key_phrases_and_topics.json'
 
+# List of all available video files
 video_files = [
-    "Mod01_Course+Overview.mp4",
-    "Mod02_Intro.mp4",
-    "Mod02_Sect01.mp4",
-    "Mod02_Sect02.mp4",
-    "Mod02_Sect03.mp4",
-    "Mod02_Sect04.mp4",
-    "Mod02_Sect05.mp4",
-    "Mod02_WrapUp.mp4",
-    "Mod03_Intro.mp4",
-    "Mod03_Sect01.mp4",
-    "Mod03_Sect02_part1.mp4",
-    "Mod03_Sect02_part2.mp4",
-    "Mod03_Sect02_part3.mp4",
-    "Mod03_Sect03_part1.mp4",
-    "Mod03_Sect03_part2.mp4",
-    "Mod03_Sect03_part3.mp4",
-    "Mod03_Sect04_part1.mp4",
-    "Mod03_Sect04_part2.mp4",
-    "Mod03_Sect04_part3.mp4",
-    "Mod03_Sect05.mp4",
-    "Mod03_Sect06.mp4",
-    "Mod03_Sect07_part1.mp4",
-    "Mod03_Sect07_part2.mp4",
-    "Mod03_Sect07_part3.mp4",
-    "Mod03_Sect08.mp4",
-    "Mod03_WrapUp.mp4",
-    "Mod04_Intro.mp4",
-    "Mod04_Sect01.mp4",
-    "Mod04_Sect02_part1.mp4",
-    "Mod04_Sect02_part2.mp4",
- "Mod04_Sect02_part3.mp4",
-    "Mod04_WrapUp.mp4",
-    "Mod05_Intro.mp4",
-    "Mod05_Sect01_ver2.mp4",
-    "Mod05_Sect02_part1_ver2.mp4",
-    "Mod05_Sect02_part2.mp4",
-    "Mod05_Sect03_part1.mp4",
-    "Mod05_Sect03_part2.mp4",
-    "Mod05_Sect03_part3.mp4",
-    "Mod05_Sect03_part4_ver2.mp4",
-    "Mod05_WrapUp_ver2.mp4",
-    "Mod06_Intro.mp4",
-    "Mod06_Sect01.mp4",
-    "Mod06_Sect02.mp4",
-    "Mod06_WrapUp.mp4",
-    "Mod07_Sect01.mp4"
+    "Mod01_Course+Overview.mp4", "Mod02_Intro.mp4", "Mod02_Sect01.mp4", "Mod02_Sect02.mp4",
+    "Mod02_Sect03.mp4", "Mod02_Sect04.mp4", "Mod02_Sect05.mp4", "Mod02_WrapUp.mp4",
+    "Mod03_Intro.mp4", "Mod03_Sect01.mp4", "Mod03_Sect02_part1.mp4", "Mod03_Sect02_part2.mp4",
+    "Mod03_Sect02_part3.mp4", "Mod03_Sect03_part1.mp4", "Mod03_Sect03_part2.mp4", "Mod03_Sect03_part3.mp4",
+    "Mod03_Sect04_part1.mp4", "Mod03_Sect04_part2.mp4", "Mod03_Sect04_part3.mp4", "Mod03_Sect05.mp4",
+    "Mod03_Sect06.mp4", "Mod03_Sect07_part1.mp4", "Mod03_Sect07_part2.mp4", "Mod03_Sect07_part3.mp4",
+    "Mod03_Sect08.mp4", "Mod03_WrapUp.mp4", "Mod04_Intro.mp4", "Mod04_Sect01.mp4",
+    "Mod04_Sect02_part1.mp4", "Mod04_Sect02_part2.mp4", "Mod04_Sect02_part3.mp4", "Mod04_WrapUp.mp4",
+    "Mod05_Intro.mp4", "Mod05_Sect01_ver2.mp4", "Mod05_Sect02_part1_ver2.mp4", "Mod05_Sect02_part2.mp4",
+    "Mod05_Sect03_part1.mp4", "Mod05_Sect03_part2.mp4", "Mod05_Sect03_part3.mp4", "Mod05_Sect03_part4_ver2.mp4",
+    "Mod05_WrapUp_ver2.mp4", "Mod06_Intro.mp4", "Mod06_Sect01.mp4", "Mod06_Sect02.mp4",
+    "Mod06_WrapUp.mp4", "Mod07_Sect01.mp4"
 ]
 
-
 def generate_wordcloud_image(text):
+    """Generate a word cloud image from a given text and return it as a base64 string."""
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
     img = io.BytesIO()
     plt.figure(figsize=(10, 5))
@@ -86,9 +53,11 @@ def dashboard():
         json_data = response.json()
     except Exception as e:
         return f"JSON decode error: {e}"
-  filtered_key_phrases = {}
+
+    filtered_key_phrases = {}
     relevant_movies = set()
 
+    # Search key phrases and topics for match
     for file_name, content in json_data.items():
         key_phrases = content.get('key_phrases', [])
         topics = content.get('topics', [])
@@ -103,6 +72,7 @@ def dashboard():
             }
             relevant_movies.add(file_name + ".mp4")
 
+    # Generate list of video URLs to display
     movie_urls = [BASE_URL + video for video in video_files if video in relevant_movies]
 
     return render_template('index.html',
@@ -118,10 +88,11 @@ def watch(video_filename):
     response = requests.get(json_url)
     json_data = response.json()
 
-    video_key = movie_name.replace('+', ' ')
+    video_key = movie_name.replace('+', ' ')  # Match JSON keys with S3 filenames
     phrases = json_data.get(video_key, {}).get("key_phrases", [])
     topics = json_data.get(video_key, {}).get("topics", [])
 
+    # Generate word cloud from key phrases
     phrase_text = ' '.join(phrases)
     wordcloud_img = generate_wordcloud_image(phrase_text)
 
@@ -130,8 +101,7 @@ def watch(video_filename):
                            movie_name=movie_name,
                            key_phrases=phrases,
                            topics=topics,
- wordcloud_img=wordcloud_img)
+                           wordcloud_img=wordcloud_img)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
-
