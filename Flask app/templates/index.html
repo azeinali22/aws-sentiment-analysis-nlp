@@ -43,8 +43,6 @@
     .card-grid {
       padding: 40px 20px;
     }
-U nano 7.2                                                                              index.html
-    }
 
     .video-card {
       background-color: #1f2c3d;
@@ -90,6 +88,7 @@ U nano 7.2                                                                      
   </style>
 </head>
 <body>
+  <!-- Header Section with Search Bar -->
   <div class="header">
     <h1>Amirhossein Zeinali Dehaghani (1225496)</h1>
     <form method="POST" action="/" class="search-bar d-flex">
@@ -98,6 +97,7 @@ U nano 7.2                                                                      
     </form>
   </div>
 
+  <!-- Video Card Grid -->
   <div class="container card-grid">
     {% if movie_urls %}
       <div class="row g-4">
@@ -105,10 +105,10 @@ U nano 7.2                                                                      
           <div class="col-6 col-sm-4 col-md-3">
             <a href="{{ url_for('watch', video_filename=movie_url.split('/')[-1]) }}">
               <div class="card video-card">
+                <!-- Load thumbnail from S3 -->
                 <img src="https://nlpprojectamirhossein.s3.us-east-1.amazonaws.com/thumbnails/{{ movie_url.split('/')[-1].replace('.mp4', '.jpg') }}" alt="Thumbnail">
                 <div class="video-title">
                   {{ movie_url.split('/')[-1] }}
-                  <span class="badge bg-success ms-2 d-none" id="badge_{{ movie_url.split('/')[-1] }}">Completed</span>
                 </div>
               </div>
             </a>
@@ -119,18 +119,5 @@ U nano 7.2                                                                      
       <p class="text-center mt-5">No videos found matching "{{ search_query }}"</p>
     {% endif %}
   </div>
-
-  <!-- JS for Completion Badge -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      {% for movie_url in movie_urls %}
-        const vid = "{{ movie_url.split('/')[-1] }}";
-        if (localStorage.getItem("completed_" + vid) === "true") {
-          const badge = document.getElementById("badge_" + vid);
-          if (badge) badge.classList.remove("d-none");
-  }
-      {% endfor %}
-    });
-  </script>
 </body>
 </html>
