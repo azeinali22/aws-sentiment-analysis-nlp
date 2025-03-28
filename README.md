@@ -61,8 +61,6 @@ This project is an end-to-end pipeline for building an **interactive video learn
 - 📥 Download button
 - 📚 Display of extracted topics and key phrases
 
-![screenshot](assets/dashboard.png)
-
 ---
 
 ## 🧠 NLP Example Output
