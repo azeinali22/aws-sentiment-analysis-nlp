@@ -1,103 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ movie_name }}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f4f6f8;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ movie_name }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f6f8;
+      font-family: 'Arial', sans-serif;
+    }
 
-        .movie-container {
-            margin-top: 40px;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    .movie-container {
+      margin-top: 40px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .movie-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 30px;
-            color: #333;
-        }
+    .movie-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #333;
+    }
 
-        .video-player {
-            width: 100%;
-            max-width: 960px;
-            height: 540px;
-            background-color: black;
-            border-radius: 8px;
-        }
+    .video-player {
+      width: 100%;
+      max-width: 960px;
+      height: 540px;
+      background-color: black;
+      border-radius: 8px;
+    }
 
-        .btn-back, .btn-download {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-right: 10px;
-        }
+    .btn-back, .btn-download {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-top: 20px;
+ margin-right: 10px;
+    }
 
-        .badge {
-            font-size: 0.85rem;
-            margin: 0 3px 3px 0;
-        }
-    </style>
+    .badge {
+      font-size: 0.85rem;
+      margin: 0 5px 5px 0;
+    }
+
+    .badge-score {
+      font-size: 0.75rem;
+      margin-left: 5px;
+      background-color: #dee2e6;
+      color: #333;
+      border-radius: 0.375rem;
+      padding: 2px 6px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container movie-container">
-        <!-- Movie Title -->
-        <h1 class="text-center movie-title">{{ movie_name }}</h1>
+  <div class="container movie-container">
 
-        <!-- Video Player -->
-        <div class="text-center mb-4">
-            <video class="video-player" controls>
-                <source src="{{ video_url }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    <!-- Movie Title -->
+    <h1 class="text-center movie-title">{{ movie_name }}</h1>
 
-        <!-- Key Phrases -->
-        <h3 class="mt-4">Key Phrases</h3>
-        <div>
-            {% for phrase in key_phrases %}
-                <span class="badge bg-info text-dark">{{ phrase }}</span>
-            {% endfor %}
-        </div>
-
-        <!-- Topics -->
-        <h3 class="mt-4">Topics</h3>
-        <div>
-            {% for topic_group in topics %}
-                <div class="mb-2">
-                    {% for word in topic_group %}
-                        <span class="badge bg-warning text-dark">{{ word }}</span>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </div>
-
-        <!-- Word Cloud -->
-        <h3 class="mt-4">Word Cloud</h3>
-        <div class="text-center mb-4">
-            <img src="data:image/png;base64,{{ wordcloud_img }}" class="img-fluid rounded shadow">
-        </div>
-
-        <!-- Buttons -->
-        <div class="text-center">
-            <a href="{{ url_for('dashboard') }}" class="btn btn-back">Back to Movie List</a>
-            <a href="{{ video_url }}" download class="btn btn-download">Download Video</a>
-        </div>
+    <!-- Video Player -->
+    <div class="text-center mb-4">
+      <video class="video-player" controls>
+        <source src="{{ video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Key Phrases -->
+    <h3 class="mt-4">Key Phrases</h3>
+    <div>
+      {% for phrase in key_phrases %}
+        {% if phrase is string %}
+          <span class="badge bg-info text-dark">{{ phrase }}</span>
+        {% elif phrase is mapping %}
+          <span class="badge bg-info text-dark">
+            {{ phrase.text }}
+            {% if phrase.score %}
+              <span class="badge-score">Score: {{ "%.2f"|format(phrase.score) }}</span>
+            {% endif %}
+          </span>
+ {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Topics -->
+    <h3 class="mt-4">Topics</h3>
+    <div>
+      {% for word in topics %}
+        <span class="badge bg-warning text-dark">{{ word }}</span>
+      {% endfor %}
+    </div>
+
+    <!-- Word Cloud -->
+    <h3 class="mt-4">Word Cloud</h3>
+    <div class="text-center mb-4">
+      <img src="data:image/png;base64,{{ wordcloud_img }}" class="img-fluid rounded shadow">
+    </div>
+
+    <!-- Buttons -->
+    <div class="text-center">
+      <a href="{{ url_for('dashboard') }}" class="btn btn-back">Back to Movie List</a>
+      <a href="{{ video_url }}" download class="btn btn-download">Download Video</a>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
