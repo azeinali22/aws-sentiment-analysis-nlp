@@ -57,13 +57,21 @@ def dashboard():
     filtered_key_phrases = {}
     relevant_movies = set()
 
-    # Search key phrases and topics for match
     for file_name, content in json_data.items():
         key_phrases = content.get('key_phrases', [])
         topics = content.get('topics', [])
 
-        relevant_key_phrases_list = [kp for kp in key_phrases if search_query in kp.lower()]
-        relevant_topics_list = [t for t in topics if search_query in ' '.join(t).lower()]
+        # Extract relevant phrases by checking 'text' field
+        relevant_key_phrases_list = [
+            kp for kp in key_phrases
+            if isinstance(kp, dict) and search_query in kp.get('text', '').lower()
+        ]
+
+        # Search in all topic words (flattened) if search query matches
+        relevant_topics_list = [
+            topic for topic in topics
+            if any(search_query in word.lower() for word in topic)
+        ]
 
         if relevant_key_phrases_list or relevant_topics_list:
             filtered_key_phrases[file_name] = {
@@ -72,13 +80,13 @@ def dashboard():
             }
             relevant_movies.add(file_name + ".mp4")
 
-    # Generate list of video URLs to display
     movie_urls = [BASE_URL + video for video in video_files if video in relevant_movies]
-
-    return render_template('index.html',
-                           movie_urls=movie_urls,
-                           search_query=search_query,
-                           filtered_key_phrases=filtered_key_phrases)
+ return render_template(
+        'index.html',
+        movie_urls=movie_urls,
+        search_query=search_query,
+        filtered_key_phrases=filtered_key_phrases
+    )
 
 @app.route('/watch/<video_filename>')
 def watch(video_filename):
@@ -88,12 +96,14 @@ def watch(video_filename):
     response = requests.get(json_url)
     json_data = response.json()
 
-    video_key = movie_name.replace('+', ' ')  # Match JSON keys with S3 filenames
+    video_key = movie_name.replace('+', ' ')
     phrases = json_data.get(video_key, {}).get("key_phrases", [])
     topics = json_data.get(video_key, {}).get("topics", [])
 
-    # Generate word cloud from key phrases
-    phrase_text = ' '.join(phrases)
+    # FIX: Join only the text part of the phrases
+    phrase_texts = [p['text'] if isinstance(p, dict) and 'text' in p else p for p in phrases]
+    phrase_text = ' '.join(phrase_texts)
+
     wordcloud_img = generate_wordcloud_image(phrase_text)
 
     return render_template('watch.html',
@@ -102,6 +112,7 @@ def watch(video_filename):
                            key_phrases=phrases,
                            topics=topics,
                            wordcloud_img=wordcloud_img)
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
