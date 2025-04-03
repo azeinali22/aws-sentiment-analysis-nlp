@@ -1,0 +1,1363 @@
+{
+    "Mod01_Course Overview": {
+        "key_phrases": [
+            {
+                "text": "including foundational computer literacy skills like basic computer concepts",
+                "score": 54.4
+            },
+            {
+                "text": "machine learning engineers also require technical competencies",
+                "score": 32.57
+            },
+            {
+                "text": "applied science roles also require technical competencies",
+                "score": 31.06
+            },
+            {
+                "text": "natural language processing .. section 2 reviews",
+                "score": 30.09
+            },
+            {
+                "text": "first complete aws academy cloud foundations",
+                "score": 28.21
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "learning",
+                "machine"
+            ]
+        ]
+    },
+    "Mod02_Intro": {
+        "key_phrases": [
+            {
+                "text": "introduce machine learning .. well first look",
+                "score": 35.69
+            },
+            {
+                "text": "traditional software development methods",
+                "score": 16.0
+            },
+            {
+                "text": "use machine learning instead",
+                "score": 14.36
+            },
+            {
+                "text": "aws academy machine learning",
+                "score": 14.36
+            }
+        ],
+        "topics": [
+            [
+                "artificial",
+                "business",
+                "learning",
+                "machine"
+            ]
+        ]
+    },
+    "Mod02_Sect01": {
+        "key_phrases": [
+            {
+                "text": "ai problems typically span many fields",
+                "score": 25.77
+            },
+            {
+                "text": "imagenet largescale visual recognition challenge",
+                "score": 22.0
+            },
+            {
+                "text": "deep learning goes back decades",
+                "score": 20.95
+            },
+            {
+                "text": "recent occurrence .. rapid advancements",
+                "score": 20.83
+            },
+            {
+                "text": "intelligent machine could work 247",
+                "score": 20.7
+            }
+        ],
+        "topics": [
+            [
+                "artificial",
+                "learning",
+                "machine",
+                "model"
+            ]
+        ]
+    },
+    "Mod02_Sect02": {
+        "key_phrases": [
+            {
+                "text": "social media applications using facial detection",
+                "score": 31.25
+            },
+            {
+                "text": "selfdriving vehicles bring together many machine",
+                "score": 25.0
+            },
+            {
+                "text": "different customer support departments represent",
+                "score": 18.27
+            },
+            {
+                "text": "aws deepracer teams use rewards",
+                "score": 17.1
+            },
+            {
+                "text": "previously hidden pedestrian walks",
+                "score": 16.0
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "learning",
+                "machine",
+                "problem"
+            ]
+        ]
+    },
+    "Mod02_Sect03": {
+        "key_phrases": [
+            {
+                "text": "managed services well also explore later",
+                "score": 24.83
+            },
+            {
+                "text": "certain amazon ml services",
+                "score": 16.0
+            },
+            {
+                "text": "evaluation data .. well show",
+                "score": 15.57
+            },
+            {
+                "text": "team believe could benefit",
+                "score": 14.29
+            },
+            {
+                "text": "cosmetic reasons .. depending",
+                "score": 14.25
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "feature",
+                "model",
+                "training"
+            ]
+        ]
+    },
+    "Mod02_Sect04": {
+        "key_phrases": [
+            {
+                "text": "thirdparty machine learning developers .. aws also provides",
+                "score": 37.91
+            },
+            {
+                "text": "deploy machine learning instances running jupyter notebooks",
+                "score": 31.67
+            },
+            {
+                "text": "amazon forecast uses machine learning",
+                "score": 19.57
+            },
+            {
+                "text": "open source machine learning library",
+                "score": 19.1
+            },
+            {
+                "text": "aws also provides compute instances",
+                "score": 19.08
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "data",
+                "learning",
+                "machine"
+            ]
+        ]
+    },
+    "Mod02_Sect05": {
+        "key_phrases": [
+            {
+                "text": "generating enough good data thats representative",
+                "score": 30.08
+            },
+            {
+                "text": "youll face many machine learning challenges",
+                "score": 25.12
+            },
+            {
+                "text": "without substantial machine learning knowledge",
+                "score": 22.45
+            },
+            {
+                "text": "add sophisticated machine learning capabilities",
+                "score": 22.45
+            },
+            {
+                "text": "solve machine learning problems within",
+                "score": 19.2
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "learning",
+                "machine",
+                "model",
+                "problem"
+            ]
+        ]
+    },
+    "Mod02_WrapUp": {
+        "key_phrases": [
+            {
+                "text": "machine learning applies learning algorithms",
+                "score": 18.51
+            },
+            {
+                "text": "use machine learning instead",
+                "score": 12.16
+            }
+        ],
+        "topics": [
+            [
+                "learning",
+                "looked",
+                "machine",
+                "problem"
+            ]
+        ]
+    },
+    "Mod03_Intro": {
+        "key_phrases": [
+            {
+                "text": "use open source tools",
+                "score": 14.75
+            },
+            {
+                "text": "amazon sagemaker hyperparameter tuning",
+                "score": 13.75
+            },
+            {
+                "text": "many machine learning problems",
+                "score": 13.69
+            },
+            {
+                "text": "aws academy machine learning",
+                "score": 13.69
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "learning",
+                "machine",
+                "model"
+            ]
+        ]
+    },
+    "Mod03_Sect01": {
+        "key_phrases": [
+            {
+                "text": "uc irvine machine learning repository",
+                "score": 21.0
+            },
+            {
+                "text": "first data set contains numerical information",
+                "score": 20.01
+            },
+            {
+                "text": "youll see several data sets",
+                "score": 17.52
+            },
+            {
+                "text": "identify fraudulent credit card transactions",
+                "score": 17.23
+            },
+            {
+                "text": "easily measured .. depending",
+                "score": 15.4
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "learning",
+                "machine",
+                "problem"
+            ]
+        ]
+    },
+    "Mod03_Sect02_part1": {
+        "key_phrases": [
+            {
+                "text": "manage time series database designed specifically",
+                "score": 30.92
+            },
+            {
+                "text": "also many open source data sets ranging",
+                "score": 29.86
+            },
+            {
+                "text": "could use amazon relational database service",
+                "score": 21.71
+            },
+            {
+                "text": "could also use amazon redshift ,.",
+                "score": 21.46
+            },
+            {
+                "text": "service without needing data movement",
+                "score": 21.28
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "data",
+                "training",
+                "transaction"
+            ]
+        ]
+    },
+    "Mod03_Sect02_part2": {
+        "key_phrases": [
+            {
+                "text": "scala apache spark etl code using",
+                "score": 28.67
+            },
+            {
+                "text": "spread across many different systems",
+                "score": 25.0
+            },
+            {
+                "text": "well continue exploring data collection",
+                "score": 19.97
+            },
+            {
+                "text": "fully managed etl service",
+                "score": 14.17
+            },
+            {
+                "text": "aws glue api operations",
+                "score": 13.3
+            }
+        ],
+        "topics": [
+            [
+                "aws",
+                "data",
+                "etl",
+                "glue",
+                "job"
+            ]
+        ]
+    },
+    "Mod03_Sect02_part3": {
+        "key_phrases": [
+            {
+                "text": "solving machine learning problems ,.",
+                "score": 21.5
+            },
+            {
+                "text": "well continue exploring data collection",
+                "score": 20.4
+            },
+            {
+                "text": "event history simplifies security analysis",
+                "score": 18.75
+            },
+            {
+                "text": "retain account activity related",
+                "score": 14.67
+            },
+            {
+                "text": "like secure sockets layer",
+                "score": 13.67
+            }
+        ],
+        "topics": [
+            [
+                "access",
+                "aws",
+                "data",
+                "secure",
+                "service"
+            ]
+        ]
+    },
+    "Mod03_Sect03_part1": {
+        "key_phrases": [
+            {
+                "text": "general 2d labeled size mutable tabular structure",
+                "score": 44.5
+            },
+            {
+                "text": "one popular open source python library",
+                "score": 34.0
+            },
+            {
+                "text": "often identify data type issues",
+                "score": 18.75
+            },
+            {
+                "text": "correct data type using pandas",
+                "score": 15.2
+            },
+            {
+                "text": "make sure youre using",
+                "score": 14.25
+            }
+        ],
+        "topics": [
+            [
+                "column",
+                "data",
+                "panda",
+                "type"
+            ]
+        ]
+    },
+    "Mod03_Sect03_part2": {
+        "key_phrases": [
+            {
+                "text": "feature data normally distributed ?.",
+                "score": 19.55
+            },
+            {
+                "text": "easily create scatter plot matrices",
+                "score": 18.25
+            },
+            {
+                "text": "two different measures describing",
+                "score": 13.43
+            },
+            {
+                "text": "poor quality wines like",
+                "score": 12.23
+            },
+            {
+                "text": "target variable thats also",
+                "score": 11.5
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "feature",
+                "plot",
+                "value",
+                "variable"
+            ]
+        ]
+    },
+    "Mod03_Sect03_part3": {
+        "key_phrases": [
+            {
+                "text": "weak linear relationships among numerical variables",
+                "score": 26.35
+            }
+        ],
+        "topics": [
+            [
+                "correlation",
+                "data",
+                "linear",
+                "relationship"
+            ]
+        ]
+    },
+    "Mod03_Sect04_part1": {
+        "key_phrases": [
+            {
+                "text": "machine learning algorithms work best",
+                "score": 21.67
+            },
+            {
+                "text": "use tools like skykit learn",
+                "score": 21.33
+            },
+            {
+                "text": "feature extraction builds valuable information",
+                "score": 20.89
+            },
+            {
+                "text": "could also remove columns altogether",
+                "score": 19.67
+            },
+            {
+                "text": "data set contain numeric data",
+                "score": 16.0
+            }
+        ],
+        "topics": [
+            [
+                "column",
+                "data",
+                "feature",
+                "value"
+            ]
+        ]
+    },
+    "Mod03_Sect04_part2": {
+        "key_phrases": [
+            {
+                "text": "learning algorithms cant handle missing values automatically",
+                "score": 38.33
+            },
+            {
+                "text": "examples include k nearest neighbor",
+                "score": 23.5
+            },
+            {
+                "text": "well continue exploring feature engineering",
+                "score": 20.5
+            },
+            {
+                "text": "data items might also capture",
+                "score": 19.59
+            },
+            {
+                "text": "might also encounter data sets",
+                "score": 18.09
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "missing",
+                "value",
+                "variable"
+            ]
+        ]
+    },
+    "Mod03_Sect04_part3": {
+        "key_phrases": [
+            {
+                "text": "better data typically provides better results",
+                "score": 28.24
+            },
+            {
+                "text": "failure like incorrectly entered data",
+                "score": 23.07
+            },
+            {
+                "text": "many filters provide feature ranking instead",
+                "score": 20.94
+            },
+            {
+                "text": "well continue exploring feature engineering",
+                "score": 20.11
+            },
+            {
+                "text": "three main feature selection methods",
+                "score": 20.0
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "feature",
+                "method",
+                "model",
+                "outlier"
+            ]
+        ]
+    },
+    "Mod03_Sect05": {
+        "key_phrases": [
+            {
+                "text": "solve problems like identifying customer groupings based",
+                "score": 42.27
+            },
+            {
+                "text": "better .. kfold cross validation randomly petitions",
+                "score": 35.63
+            },
+            {
+                "text": "youll likely notice things youll want",
+                "score": 32.4
+            },
+            {
+                "text": "respective amazon sagemaker sdk estimator class",
+                "score": 27.64
+            },
+            {
+                "text": "amazon sagemaker provides four different ways",
+                "score": 26.97
+            }
+        ],
+        "topics": [
+            [
+                "algorithm",
+                "amazon",
+                "data",
+                "model",
+                "training"
+            ]
+        ]
+    },
+    "Mod03_Sect06": {
+        "key_phrases": [
+            {
+                "text": "automatically scale across multiple availability zones",
+                "score": 31.1
+            },
+            {
+                "text": "shared serving container thats enabled",
+                "score": 23.0
+            },
+            {
+                "text": "use amazon sagemaker batch transform",
+                "score": 16.61
+            },
+            {
+                "text": "could potentially identify alternative",
+                "score": 16.0
+            },
+            {
+                "text": "builtin amazon cloudwatch monitoring",
+                "score": 15.67
+            }
+        ],
+        "topics": [
+            [
+                "deploy",
+                "endpoint",
+                "model",
+                "prediction",
+                "sagemaker"
+            ]
+        ]
+    },
+    "Mod03_Sect07_part1": {
+        "key_phrases": [
+            {
+                "text": "simple image recognition model thats labeling data",
+                "score": 35.0
+            },
+            {
+                "text": "well review calculating classification metrics ..",
+                "score": 27.92
+            },
+            {
+                "text": "simple binary classification problem",
+                "score": 16.1
+            },
+            {
+                "text": "ml problem youre working",
+                "score": 14.6
+            },
+            {
+                "text": "arent considered good outcomes",
+                "score": 13.75
+            }
+        ],
+        "topics": [
+            [
+                "cat",
+                "class",
+                "metric",
+                "model",
+                "predicted"
+            ]
+        ]
+    },
+    "Mod03_Sect07_part2": {
+        "key_phrases": [
+            {
+                "text": "youre trying several models using multiple folds",
+                "score": 39.6
+            },
+            {
+                "text": "means youll get many false positives",
+                "score": 23.67
+            },
+            {
+                "text": "fun website might get",
+                "score": 16.0
+            },
+            {
+                "text": "make sure youll identify",
+                "score": 13.83
+            },
+            {
+                "text": "better mean making sure",
+                "score": 12.57
+            }
+        ],
+        "topics": [
+            [
+                "cat",
+                "correctly",
+                "identified",
+                "model",
+                "number"
+            ]
+        ]
+    },
+    "Mod03_Sect07_part3": {
+        "key_phrases": [
+            {
+                "text": "different machine learning models use different metrics",
+                "score": 31.34
+            },
+            {
+                "text": "almost perfect performance identifying fraud cases",
+                "score": 27.5
+            },
+            {
+                "text": "high true negative number might hide",
+                "score": 20.93
+            },
+            {
+                "text": "mean squared error function directly",
+                "score": 20.17
+            },
+            {
+                "text": "could use kfold cross validation",
+                "score": 18.43
+            }
+        ],
+        "topics": [
+            [
+                "metric",
+                "model",
+                "positive",
+                "true"
+            ]
+        ]
+    },
+    "Mod03_Sect08": {
+        "key_phrases": [
+            {
+                "text": "hyperparameters include optimizers like gradient descent",
+                "score": 22.02
+            },
+            {
+                "text": "build complex machine learning systems",
+                "score": 22.0
+            },
+            {
+                "text": "although using autopilot doesnt remove",
+                "score": 17.65
+            },
+            {
+                "text": "prebuilt deep learning frameworks",
+                "score": 15.5
+            },
+            {
+                "text": "amazon sagemaker automatic model tuning",
+                "score": 15.47
+            }
+        ],
+        "topics": [
+            [
+                "hyperparameter",
+                "hyperparameters",
+                "model",
+                "tuning",
+                "value"
+            ]
+        ]
+    },
+    "Mod03_WrapUp": {
+        "key_phrases": [
+            {
+                "text": "amazon sagemaker hyper parameter tuning",
+                "score": 22.33
+            },
+            {
+                "text": "use open source tools",
+                "score": 14.75
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "data",
+                "model"
+            ]
+        ]
+    },
+    "Mod04_Intro": {
+        "key_phrases": [
+            {
+                "text": "aws academy machine learning",
+                "score": 16.0
+            },
+            {
+                "text": "forecasting .. well start",
+                "score": 14.0
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "data",
+                "forecast",
+                "look"
+            ]
+        ]
+    },
+    "Mod04_Sect01": {
+        "key_phrases": [
+            {
+                "text": "time component adds additional information ,.",
+                "score": 29.25
+            },
+            {
+                "text": "also makes time series problems",
+                "score": 19.92
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "forecasting",
+                "pattern",
+                "time"
+            ]
+        ]
+    },
+    "Mod04_Sect02_part1": {
+        "key_phrases": [
+            {
+                "text": "daylight savings time might even occur twice",
+                "score": 31.45
+            },
+            {
+                "text": "monitored certain data wasnt working correctly",
+                "score": 31.21
+            },
+            {
+                "text": "units sold per time period",
+                "score": 19.37
+            },
+            {
+                "text": "measurement couldnt happen correctly",
+                "score": 16.5
+            },
+            {
+                "text": "time stamp doesnt represent",
+                "score": 13.37
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "might",
+                "sale",
+                "time",
+                "value"
+            ]
+        ]
+    },
+    "Mod04_Sect02_part2": {
+        "key_phrases": [
+            {
+                "text": "well continue exploring wrangling time series data",
+                "score": 34.47
+            },
+            {
+                "text": "former retail sees even higher sales",
+                "score": 32.0
+            },
+            {
+                "text": "random time series data sets",
+                "score": 16.97
+            },
+            {
+                "text": "module include time series data",
+                "score": 16.47
+            },
+            {
+                "text": "computer science doctorates awarded",
+                "score": 16.0
+            }
+        ],
+        "topics": [
+            [
+                "algorithm",
+                "data",
+                "series",
+                "time"
+            ]
+        ]
+    },
+    "Mod04_Sect02_part3": {
+        "key_phrases": [
+            {
+                "text": "machine learning development pipeline youve seen throughout",
+                "score": 40.33
+            },
+            {
+                "text": "lower w quantile loss metrics mean",
+                "score": 23.57
+            },
+            {
+                "text": "back test window offset parameter",
+                "score": 20.72
+            },
+            {
+                "text": "first amazon forecast evaluation metric",
+                "score": 18.62
+            },
+            {
+                "text": "like w quantile loss ,.",
+                "score": 17.94
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "data",
+                "forecast",
+                "time"
+            ]
+        ]
+    },
+    "Mod04_WrapUp": {
+        "key_phrases": [],
+        "topics": [
+            [
+                "amazon",
+                "describe",
+                "forecast",
+                "time"
+            ]
+        ]
+    },
+    "Mod05_Intro": {
+        "key_phrases": [
+            {
+                "text": "amazon managed machine learning services available",
+                "score": 26.83
+            },
+            {
+                "text": "aws academy machine learning",
+                "score": 16.5
+            },
+            {
+                "text": "amazon sagemaker ground truth",
+                "score": 15.5
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "service"
+            ]
+        ]
+    },
+    "Mod05_Sect01_ver2": {
+        "key_phrases": [
+            {
+                "text": "require object segmentation include autonomous vehicles",
+                "score": 26.4
+            },
+            {
+                "text": "heres another computer vision use case",
+                "score": 20.04
+            },
+            {
+                "text": "video adds another dimension",
+                "score": 15.29
+            },
+            {
+                "text": "initiate various actions based",
+                "score": 15.0
+            },
+            {
+                "text": "expressed emotions without identifying",
+                "score": 15.0
+            }
+        ],
+        "topics": [
+            [
+                "computer",
+                "image",
+                "object",
+                "vision"
+            ]
+        ]
+    },
+    "Mod05_Sect02_part1_ver2": {
+        "key_phrases": [
+            {
+                "text": "real estate properties theyre viewing",
+                "score": 25.0
+            },
+            {
+                "text": "computer vision service thats based",
+                "score": 21.33
+            },
+            {
+                "text": "instore camera captures video thats",
+                "score": 20.81
+            },
+            {
+                "text": "well explore facial detection ..",
+                "score": 20.17
+            },
+            {
+                "text": "amazon recognition interprets emotional expressions",
+                "score": 20.03
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "image",
+                "object",
+                "recognition",
+                "service"
+            ]
+        ]
+    },
+    "Mod05_Sect02_part2": {
+        "key_phrases": [
+            {
+                "text": "amazon recognition video doesnt analyze every frame thats passed",
+                "score": 51.48
+            },
+            {
+                "text": "stream processor thats called create stream processor",
+                "score": 33.51
+            },
+            {
+                "text": "amazon recognition video uses amazon kinesis video streams",
+                "score": 30.65
+            },
+            {
+                "text": "external image id request parameter",
+                "score": 19.71
+            },
+            {
+                "text": "amazon recognition video stream processor",
+                "score": 18.92
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "face",
+                "image",
+                "recognition"
+            ]
+        ]
+    },
+    "Mod05_Sect03_part1": {
+        "key_phrases": [
+            {
+                "text": "results show various attributes .. however",
+                "score": 33.25
+            },
+            {
+                "text": "managed service like amazon recognition custom labels",
+                "score": 31.19
+            },
+            {
+                "text": "amazon recognition custom labels also includes",
+                "score": 23.19
+            },
+            {
+                "text": "draw bounding boxes around images",
+                "score": 22.14
+            },
+            {
+                "text": "amazon recognition custom labels builds",
+                "score": 21.69
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "image",
+                "model",
+                "recognition"
+            ]
+        ]
+    },
+    "Mod05_Sect03_part2": {
+        "key_phrases": [
+            {
+                "text": "weve mentioned amazon sagemaker ground truth",
+                "score": 24.3
+            },
+            {
+                "text": "sagemaker ground truth selects data points",
+                "score": 23.63
+            },
+            {
+                "text": "well continue exploring video analysis",
+                "score": 22.8
+            },
+            {
+                "text": "build high quality training datasets",
+                "score": 22.0
+            },
+            {
+                "text": "recommend using automated data labeling",
+                "score": 17.43
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "data",
+                "image",
+                "label",
+                "labeling"
+            ]
+        ]
+    },
+    "Mod05_Sect03_part3": {
+        "key_phrases": [
+            {
+                "text": "amazon recognition custom labels provides average recall metrics",
+                "score": 35.7
+            },
+            {
+                "text": "amazon recognition custom labels provides various metrics",
+                "score": 32.8
+            },
+            {
+                "text": "amazon recognition custom labels doesnt return",
+                "score": 28.66
+            },
+            {
+                "text": "amazon recognition custom labels correctly returns",
+                "score": 28.41
+            },
+            {
+                "text": "amazon recognition custom labels returns",
+                "score": 25.41
+            }
+        ],
+        "topics": [
+            [
+                "data",
+                "label",
+                "model",
+                "test"
+            ]
+        ]
+    },
+    "Mod05_Sect03_part4_ver2": {
+        "key_phrases": [
+            {
+                "text": "custom labels operation doesnt return labels",
+                "score": 27.6
+            },
+            {
+                "text": "well continue exploring video analysis",
+                "score": 22.0
+            },
+            {
+                "text": "confident amazon recognition custom labels",
+                "score": 21.43
+            },
+            {
+                "text": "amazon recognition custom labels console",
+                "score": 19.43
+            },
+            {
+                "text": "amazon recognition custom labels model",
+                "score": 18.1
+            }
+        ],
+        "topics": [
+            [
+                "custom",
+                "image",
+                "label",
+                "model",
+                "object"
+            ]
+        ]
+    },
+    "Mod05_WrapUp_ver2": {
+        "key_phrases": [
+            {
+                "text": "amazon managed machine learning services available",
+                "score": 34.33
+            },
+            {
+                "text": "amazon sagemaker ground truth",
+                "score": 16.33
+            },
+            {
+                "text": "video analysis .. list",
+                "score": 15.0
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "custom",
+                "describe",
+                "prepare"
+            ]
+        ]
+    },
+    "Mod06_Intro": {
+        "key_phrases": [
+            {
+                "text": "nlp .. lets get started ..",
+                "score": 32.4
+            },
+            {
+                "text": "using managed amazon ml services",
+                "score": 24.67
+            },
+            {
+                "text": "managed amazon ml services available",
+                "score": 24.67
+            },
+            {
+                "text": "review five aws services",
+                "score": 16.67
+            },
+            {
+                "text": "aws academy machine learning",
+                "score": 16.0
+            }
+        ],
+        "topics": [
+            [
+                "managed",
+                "nlp",
+                "service"
+            ]
+        ]
+    },
+    "Mod06_Sect01": {
+        "key_phrases": [
+            {
+                "text": "identify noun phrases using dependency charts",
+                "score": 29.33
+            },
+            {
+                "text": "presmart phone cell phones used nlp",
+                "score": 28.72
+            },
+            {
+                "text": "nlp systems face several significant challenges",
+                "score": 25.1
+            },
+            {
+                "text": "nlp systems provide python libraries",
+                "score": 20.1
+            },
+            {
+                "text": "knowledge graph combines subjectmetare expertise",
+                "score": 20.0
+            }
+        ],
+        "topics": [
+            [
+                "model",
+                "nlp",
+                "text",
+                "word"
+            ]
+        ]
+    },
+    "Mod06_Sect02": {
+        "key_phrases": [
+            {
+                "text": "well review five managed machine learning services",
+                "score": 35.9
+            },
+            {
+                "text": "payment card industry data security standard",
+                "score": 32.17
+            },
+            {
+                "text": "mobile app developers use amazon comprehend",
+                "score": 21.49
+            },
+            {
+                "text": "largescale mobile app analysis",
+                "score": 16.57
+            },
+            {
+                "text": "create sophisticated data analysis applications",
+                "score": 14.84
+            }
+        ],
+        "topics": [
+            [
+                "amazon",
+                "application",
+                "case",
+                "language"
+            ]
+        ]
+    },
+    "Mod06_WrapUp": {
+        "key_phrases": [
+            {
+                "text": "using managed amazon ml services",
+                "score": 21.0
+            },
+            {
+                "text": "ml services available",
+                "score": 11.0
+            }
+        ],
+        "topics": [
+            [
+                "describe",
+                "managed",
+                "nlp",
+                "service"
+            ]
+        ]
+    },
+    "Mod07_Sect01": {
+        "key_phrases": [
+            {
+                "text": "also helps organizations identify skilled professionals",
+                "score": 30.5
+            },
+            {
+                "text": "aws certified machine learning specialty means",
+                "score": 28.9
+            },
+            {
+                "text": "aws academy machine learning course ..",
+                "score": 26.38
+            },
+            {
+                "text": "aws certified machine learning specialty exam",
+                "score": 25.45
+            },
+            {
+                "text": "include performing basic hyperparameter optimization",
+                "score": 25.0
+            }
+        ],
+        "topics": [
+            [
+                "aws",
+                "certification",
+                "exam",
+                "learning",
+                "machine"
+            ]
+        ]
+    }
+}
